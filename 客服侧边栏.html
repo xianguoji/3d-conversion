@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>123</title>
+    <style>
+        html, body, #d1 {
+            height: 100%
+        }
+
+        div {
+            border: 1px solid red
+        }
+
+        .pos {
+            width: 50px;
+            height: 50px;
+            overflow:hidden;
+        }
+        #d2{
+            position: fixed;
+            right:0;
+            top:200px;
+        }
+        .hor{
+            position:relative;
+            right:100px;
+
+
+        }
+        .pos:hover{
+            overflow:visible;
+        }
+    </style>
+</head>
+<body>
+<div id="d1" style=" border:1px solid red">
+    <div id="d2">
+        <div class="pos">11111
+            <div class="hor">
+                11111的hover
+            </div>
+        </div>
+        <div class="pos">22222
+            <div  class="hor">
+                22222的hover
+            </div>
+        </div>
+        <div class="pos">33333
+            <div  class="hor">
+                33333的hover
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementsByClassName("pos").hover()
+</script>
+</body>
+</html>

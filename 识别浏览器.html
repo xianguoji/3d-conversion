@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JS完美识别IE, firefox, chrome, safari浏览器</title>
+    <script>
+        function BrowserType()
+        {
+            var OsObject = "";
+            if(navigator.userAgent.indexOf("MSIE")>0) {
+                OsObject = "MSIE";
+            }
+            if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){
+                OsObject = "Firefox";
+            }
+            if(isSafari=navigator.userAgent.indexOf("Safari")>0&&navigator.userAgent.indexOf("Chrome")<0) {
+                OsObject = "Safari";
+            }
+            if(isCamino=navigator.userAgent.indexOf("Chrome")>0){
+                OsObject = "Chrome";
+            }
+            return OsObject;
+        }
+        function Msg()
+        {
+            document.getElementById("msg").innerHTML = '<h1>您现在使用的浏览器为'+BrowserType()+'浏览器</h1>';
+        }
+    </script>
+</head>
+
+<body onload="Msg()">
+<span id="msg"></span>
+</body>
+</html>
